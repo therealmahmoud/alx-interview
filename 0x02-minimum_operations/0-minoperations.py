@@ -2,12 +2,12 @@
 """ An alx interview preparation question. """
 
 
-def minOperations(n):
+def minOperations(n: int) -> int:
     """ Calculates the fewest number of operations needed
     to result in exactly n H characters in the file."""
-    count = 0
-    copy = ""
-    char = "H"
+    count: int = 0
+    copy: str = ""
+    char: str = "H"
     for _ in range(n):
         if len(char) >= n:
             break
