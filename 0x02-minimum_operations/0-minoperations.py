@@ -21,7 +21,7 @@ def minOperations(n: int) -> int:
             count += 2
             copy = char
             char += copy
-        elif len(char) % 2 == 0: # for Even
+        elif len(copy) > 0: # for Even
             char += copy
             count += 1
     return count
