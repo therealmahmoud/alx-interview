@@ -10,20 +10,20 @@ def minOperations(n: int) -> int:
     char: str = "H"
     for _ in range(n):
         if len(char) >= n:
-            return 0
+            break
         if len(char) + len(copy) == n:
             char + copy
             count += 1
             break
         if len(char) % 2 != 0:
             if len(char) > n:
-                return 0
+                break
             count += 2
             copy = char
             char += copy
         if len(char) % 2 == 0:
             if len(char) > n:
-                return 0
+                break
             char += copy
             count += 1
     return count
