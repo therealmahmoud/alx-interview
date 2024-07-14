@@ -16,8 +16,6 @@ def minOperations(n: int) -> int:
             count += 1
             break
         if len(char) % 2 != 0:
-            if len(char) > n:
-                break
             count += 2
             copy = char
             char += copy
