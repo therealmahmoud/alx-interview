@@ -17,11 +17,11 @@ def minOperations(n: int) -> int:
             char + copy
             count += 1
             break
-        elif len(char) % 2 != 0: # for Odds
-            count += 2
+        elif n - len(char) > 0 and (n - len(char)) % len(char) == 0:
             copy = char
             char += copy
-        elif len(copy) > 0: # for Even
+            count += 2
+        elif len(copy) > 0:
             char += copy
             count += 1
     return count
